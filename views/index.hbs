@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   
+
+
+    
+
+   <style>
+ @import url('https://fonts.googleapis.com/css?family=Dosis');
+
+        body
+        {
+    
+            font-family: 'Dosis', sans-serif;
+            color:white;
+        
+    
+        }
+        .container{
+            width:100%;
+            height:20%;
+            /* background-color:rgba(255,255,255,0); */
+            position:sticky;
+        }
+        header{
+            /* background-color:#55d6aa; */
+            opacity: 2;
+        }
+        header::after{
+            content:'';
+            display:table;
+            clear:both;
+        }
+        nav{
+            float:right;
+    }
+        nav ul{
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+        nav li{
+            display:inline-block;
+            margin-left:50px;
+            padding:5px;
+            padding-top: 40px;
+            position: relative;
+        }
+        
+        nav a{
+            color:white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size:18px;
+        }
+        nav a:hover{
+            color:#000;
+            
+        }
+     nav a::before{
+            content:"";
+            display:block;
+            height:5px;
+            background-color: #444;
+            position: absolute;
+            top:5vh;
+            width:0%;
+            transition: all ease-in-out 500ms;
+              
+        }
+        nav a:hover::before{
+            width:200%;
+        }
+      
+
+
+       .card {
+    z-index: 1;
+    display: inline-block;
+    border-radius: 20px;
+    margin-left:8vw;
+    margin-top: 4vh;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.3);
+    height:50vh;
+    width:22vw;
+        
+        
+        
+        }
+   </style>
+   </head>
+    <body>
+
+            <div id="main" style="position:relative;background-image:url('img/back2.png');margin-left:0;width:97vw;height:100vh;width:98.6vw;">
+
+                 <section style="width:20vw;height:20vh;margin-top:2vh;position:absolute;">
+
+                    <img src="img/logo.svg" style="width:23vw;height:35vh;position:absolute;"> 
+                </section>
+
+                    <header>
+                            <div class="container">
+                               
+                            <nav>
+                                <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="#aboutus">About</a></li>
+                                <li><a href="#team">Team</a></li>
+                                <li><a href="/login">Login</a></li>
+                                <li><a href="/signup">Register</a></li>
+                                </ul>
+                                </nav>
+                            </div>
+                        </header>
+               <h1 style="color:white;font-size:5em;margin-left:35vw;position:absolute;margin-top:30vh;font-weight:bold;">Rent-A-Cycle</h1>
+               <a href="#register" style="position:absolute;font-size:2.0em;margin-top:52vh;margin-left:42.5vw;outline:none;color:white;background-color:none;border:2px solid white;border-radius:2px;padding:10px;"> Get Started </a>
+
+            </div>
+
+
+            <div id="aboutus" style="position:relative; background-color:rgba(0,194,162,1);margin-top:-19px;line-height:90px;">
+                <h1 style="font-size:50px; text-align:center;padding:10px;"> About Us</h1>
+
+                <p style="margin-left:10%;max-width:1000px;font-size:30px;padding:10px;text-align:center;"> Our Team has developed a web app in which the user can give rent for bicycles on hourly basis or he/she can buy the bicycle
+                    by contacting the owner directly. As many citizens feel worthless to buy the bicycle but can take on rent as a hourly basis.
+                    Also it gives the gift of health and hygiene to the riders and a good enjoy to trek with friends and group.
+                </p>
+
+               
+
+
+            </div>
+
+  <div id="team">  
+
+         <div id="heading" style="text-align:center;">
+             <h1> Developers</h1>
+         </div>
+
+         <div class="card" style="position:relative;">
+
+            <img src="img/prateek.jpg" style="border-radius:50%;height:25vh;width:13vw;position:absolute;margin-left:5vw;margin-top:3vh;">
+
+            <div class="bottom" style="position:absolute;margin-top:200px;margin-left:35px;">
+                <h2 style="color:black;margin-left:2.3vw;font-size:2.1em;"> Prateek Agarwal</h2>
+            </div>
+
+           </div>
+           <div class="card">
+
+                <img src="img/abhik.jpeg" style="border-radius:50%;height:25vh;width:13vw;position:absolute;margin-left:5vw;margin-top:3vh;">
+                <div class="bottom" style="position:absolute;margin-top:200px;margin-left:35px;">
+                        <h2 style="color:black;margin-left:1vw;font-size:2.1em;"> Abhik Bhattacharya</h2>
+                    </div>
+        </div>
+        <div class="card">
+                <img src="img/aradhya.jpeg" style="border-radius:50%;height:25vh;width:13vw;position:absolute;margin-left:5vw;margin-top:3vh;">
+                <div class="bottom" style="position:absolute;margin-top:200px;margin-left:35px;">
+                        <h2 style="color:black;margin-left:3vw;font-size:2.1em;"> Aradhya Mathur</h2>
+                    </div>
+
+        </div>
+        <div class="bottom" style="margin-top:15px;margin-left:160px;">
+
+        <div class="card">
+                <img src="img/vidit.jpeg" style="border-radius:50%;height:25vh;width:13vw;position:absolute;margin-left:5vw;margin-top:3vh;">
+                <div class="bottom" style="position:absolute;margin-top:200px;margin-left:35px;">
+                        <h2 style="color:black;margin-left:4vw;font-size:2.1em;"> Vidit Garg</h2>
+                    </div>
+        </div>
+        <div class="card">
+                <img src="img/mohit.jpeg" style="border-radius:50%;height:25vh;width:13vw;position:absolute;margin-left:5vw;margin-top:3vh;">
+                <div class="bottom" style="position:absolute;margin-top:200px;margin-left:50px;">
+                        <h2 style="color:black;margin-left:3vw;font-size:2.1em;"> Mohit Verma</h2>
+                    </div>
+        </div>
+        </div>
+           
+       
+        
+
+
+
+
+</div>
+
+ 
+    </body>
+</html>
+

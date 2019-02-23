@@ -1,0 +1,68 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript">
+var app = angular.module('postserviceApp', []);
+
+app.controller('postserviceCtrl', function ($scope, $http) {
+$scope.company = null;
+$scope.mfg = null;
+$scope.price = null;
+$scope.lblMsg = null;
+$scope.postdata = function (company, mfg, price) {
+var data = {
+company: company,
+mfg: mfg,
+price: price
+};
+$http.post('/api/users/post', JSON.stringify(data)).then(function (response) {
+if (response.data)
+$scope.msg = "Post Data Submitted Successfully!";
+}, function (response) {
+$scope.msg = "Service not Exists";
+$scope.statusval = response.status;
+$scope.statustext = response.statusText;
+$scope.headers = response.headers();
+});
+};
+});
+$scope.uploadedFile = function(element) {     
+ $scope.$apply(function($scope) {
+   $scope.files = element.files;  
+ });
+ 
+}
+</script>
+    <style>
+      #whole{
+ background-image: url("cycle1.jpg");
+ background-color: #cccccc;
+}
+        h1{
+            color: red    
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <h1 text-color="yellow" align="center" bgcolor="black">Please post the details of your Cycle</h1>
+<div ng-app="postserviceApp" ng-controller="postserviceCtrl">
+    <div id="whole">
+    <table cellpadding="20px">
+        <tr><td><h2>Company :</h2></td> <td><h2><input ng-model="comapny" /></h2></td></tr><br/><br/>
+        <tr><td><h2>Manufacturing date :</h2></td> <td><h2><input type="date" ng-model="mfg" /></h2></td></tr><br/><br/>
+        <tr><td><h2>Price in rupees :</h2></td> <td><h2><input ng-model="price" /></h2></td></tr><br/><br/>
+        <tr><td><h2>Upload a recent image of your cycle</h2></td><td><h2><input type="file"  name="image" onchange="angular.element(this).scope().uploadedFile(this);" class="form-control" required ></h2></td></tr>
+
+<p ng-show="myform.image.$invalid && !myform.image.$pristine" class="help-block">Image/File is required.</p>
+    </table>
+<input type="button" value="Post" ng-click="postdata(company, mfg, price)" /><br><br>
+</div>
+<p>Output Message : {{msg}}</p>
+<p>StatusCode: {{statusval}}</p>
+<p>Status: {{statustext}}</p>
+<p>Response Headers: {{headers}}</p>
+</div>
+</body>
+</html>

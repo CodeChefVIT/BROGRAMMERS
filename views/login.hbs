@@ -1,0 +1,93 @@
+<html>
+    <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+        
+        body{
+
+            background-image:url("img/back2.png");
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            justify-content: center;
+            font-family: 'Dosis', sans-serif;
+
+            
+            }
+            @import url('https://fonts.googleapis.com/css?family=Dosis');
+        
+            
+
+            .container
+            {
+                z-index: 1;
+                background-color:whitesmoke;
+                display: inline-block;
+                border-radius: 20px;
+                margin-left:38vw;
+                margin-top: 14vh;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.3);
+                height:75vh;
+                width:25vw;
+            }
+            
+            form
+            {
+                width:35vw;
+            
+            }
+            .container input
+
+            {
+                width:15vw;
+                position:relative;
+                height:7vh;
+                border-radius:25px;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.3);
+                border:none;
+                outline:none;
+                padding:15px;
+                display:block;
+                margin:10vh 0vw 0vw 5vw;
+                text-align:center;
+
+
+            }
+            .container #btn
+            {
+                background: linear-gradient(to right, #6666ff 0%, #ff00ff 100%);
+                border-radius:25px;
+                color:whitesmoke;
+                font-size:1.0em;
+            }
+        
+        </style>
+        <body>
+
+            <div class="container">
+
+                <h1 style="color:black;font-size:2.5em;text-align:center;padding:10px;margin:4vh 0 0 0;">  Login</h1>
+                <form action="/authen">
+
+
+
+                    <input type="text" name="username"placeholder="Email"> 
+                    <input type="password" name="psw" placeholder="Password">
+                    
+
+                    <input type="submit" id="btn" value="Login">
+
+
+
+
+                </form>
+
+            </div>
+           
+
+
+
+        </body>
+    </head>
+</html>

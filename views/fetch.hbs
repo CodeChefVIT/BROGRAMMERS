@@ -1,0 +1,31 @@
+<html>
+<head ng-app="rac">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="app.js"></script>
+<style>
+.card{
+    z-index: 1;
+    display: inline-block;
+    border-radius: 20px;
+    margin-left:40px;
+    margin-top: 20px;
+    align-items: center;
+    background-color: green;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.3);
+    position:relative;
+    height:200px;
+    width:280px;
+    
+}        
+    </style>
+    </head>
+    <body ng-controller="appControl">
+        
+        <ul class="card" ng-repeat="x in mess"style="display:inline-block;margin-left:20px";>
+        {[{mess}]}
+        <li class=>{{x.company}}</li>
+        <li>{{x.mfg}}</li>
+        <li>{{x.price}}</li></ul>
+       
+    </body>
+</html>
